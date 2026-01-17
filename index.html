@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugen AI - Automate Your Future</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">∞</span>
+                <span class="logo-text">Mugen</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <a href="#pricing" class="nav-cta">Get Started</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <i class="fas fa-bolt"></i>
+                <span>Powered by Advanced AI</span>
+            </div>
+            <h1 class="hero-title animate-slide-up">
+                Automate Your Business with
+                <span class="gradient-text">Infinite Possibilities</span>
+            </h1>
+            <p class="hero-subtitle animate-slide-up delay-1">
+                Transform your workflow with our intelligent AI agents. From lead generation 
+                to customer support, Mugen handles it all — so you can focus on what matters most.
+            </p>
+            <div class="hero-buttons animate-slide-up delay-2">
+                <a href="#pricing" class="btn btn-primary">
+                    <span>Start Free Trial</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Watch Demo</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-fade-in delay-3">
+                <div class="stat">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-plus">M+</span>
+                    <span class="stat-label">Tasks Automated</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="99">0</span>
+                    <span class="stat-plus">%</span>
+                    <span class="stat-label">Satisfaction Rate</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-float">
+            <div class="ai-brain">
+                <div class="brain-ring ring-1"></div>
+                <div class="brain-ring ring-2"></div>
+                <div class="brain-ring ring-3"></div>
+                <div class="brain-core">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="data-particle particle-1"></div>
+                <div class="data-particle particle-2"></div>
+                <div class="data-particle particle-3"></div>
+                <div class="data-particle particle-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Services</span>
+                <h2 class="section-title">AI Agents That Work For You</h2>
+                <p class="section-subtitle">Powerful automation solutions designed to streamline your business operations</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Lead Generation Agent</h3>
+                    <p>Automatically identify, qualify, and nurture potential customers. Our AI finds your ideal prospects and engages them 24/7.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Smart prospect identification</li>
+                        <li><i class="fas fa-check"></i> Automated outreach campaigns</li>
+                        <li><i class="fas fa-check"></i> Lead scoring & qualification</li>
+                    </ul>
+                    <a href="#pricing" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Chatbot Agent</h3>
+                    <p>Provide instant, intelligent customer support around the clock. Handle inquiries, bookings, and support tickets automatically.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Natural language processing</li>
+                        <li><i class="fas fa-check"></i> Multi-channel support</li>
+                        <li><i class="fas fa-check"></i> Seamless human handoff</li>
+                    </ul>
+                    <a href="#pricing" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Email Automation Agent</h3>
+                    <p>Smart email campaigns that adapt to your audience. Personalized messaging that converts at scale.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> AI-powered personalization</li>
+                        <li><i class="fas fa-check"></i> Automated follow-ups</li>
+                        <li><i class="fas fa-check"></i> A/B testing optimization</li>
+                    </ul>
+                    <a href="#pricing" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Scheduling Agent</h3>
+                    <p>Eliminate scheduling conflicts and automate appointment booking. Sync calendars and send reminders effortlessly.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Smart calendar management</li>
+                        <li><i class="fas fa-check"></i> Automated reminders</li>
+                        <li><i class="fas fa-check"></i> Time zone handling</li>
+                    </ul>
+                    <a href="#pricing" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Analytics Agent</h3>
+                    <p>Get actionable insights from your data automatically. Track KPIs and receive intelligent recommendations.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Real-time dashboards</li>
+                        <li><i class="fas fa-check"></i> Predictive analytics</li>
+                        <li><i class="fas fa-check"></i> Custom reports</li>
+                    </ul>
+                    <a href="#pricing" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Custom AI Solutions</h3>
+                    <p>Need something specific? We build custom AI agents tailored to your unique business requirements.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Bespoke development</li>
+                        <li><i class="fas fa-check"></i> API integrations</li>
+                        <li><i class="fas fa-check"></i> Dedicated support</li>
+                    </ul>
+                    <a href="#pricing" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="features-content">
+                <div class="features-text">
+                    <span class="section-badge">Why Choose Mugen</span>
+                    <h2 class="section-title">Built for Scale, Designed for Simplicity</h2>
+                    <div class="feature-list">
+                        <div class="feature-item" data-aos="fade-right">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Lightning Fast Setup</h4>
+                                <p>Get your AI agents up and running in minutes, not weeks. No coding required.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Enterprise Security</h4>
+                                <p>Bank-level encryption and compliance with GDPR, SOC2, and more.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-right" data-aos-delay="200">
+                            <div class="feature-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Seamless Integrations</h4>
+                                <p>Connect with 100+ popular tools including Slack, HubSpot, Salesforce, and more.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-right" data-aos-delay="300">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>24/7 Support</h4>
+                                <p>Our team is always here to help you succeed with dedicated support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-visual" data-aos="fade-left">
+                    <div class="dashboard-preview">
+                        <div class="dashboard-header">
+                            <div class="window-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <span class="dashboard-title">Mugen Dashboard</span>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="dashboard-sidebar">
+                                <div class="sidebar-item active"><i class="fas fa-home"></i></div>
+                                <div class="sidebar-item"><i class="fas fa-robot"></i></div>
+                                <div class="sidebar-item"><i class="fas fa-chart-bar"></i></div>
+                                <div class="sidebar-item"><i class="fas fa-cog"></i></div>
+                            </div>
+                            <div class="dashboard-main">
+                                <div class="mini-card">
+                                    <div class="mini-card-header">
+                                        <span>Active Agents</span>
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="mini-card-value">12</div>
+                                    <div class="mini-card-trend up">
+                                        <i class="fas fa-arrow-up"></i> 23%
+                                    </div>
+                                </div>
+                                <div class="mini-card">
+                                    <div class="mini-card-header">
+                                        <span>Tasks Today</span>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <div class="mini-card-value">1,847</div>
+                                    <div class="mini-card-trend up">
+                                        <i class="fas fa-arrow-up"></i> 15%
+                                    </div>
+                                </div>
+                                <div class="mini-chart">
+                                    <div class="chart-bars">
+                                        <div class="bar" style="height: 40%"></div>
+                                        <div class="bar" style="height: 65%"></div>
+                                        <div class="bar" style="height: 45%"></div>
+                                        <div class="bar" style="height: 80%"></div>
+                                        <div class="bar" style="height: 55%"></div>
+                                        <div class="bar" style="height: 90%"></div>
+                                        <div class="bar" style="height: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Pricing Plans</span>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">Choose the plan that fits your business needs. No hidden fees.</p>
+            </div>
+            <div class="pricing-toggle">
+                <span class="toggle-label active">Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Yearly <span class="save-badge">Save 20%</span></span>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p>Perfect for small businesses</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount monthly">49</span>
+                        <span class="amount yearly" style="display: none;">39</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 2 AI Agents</li>
+                        <li><i class="fas fa-check"></i> 5,000 tasks/month</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                        <li><i class="fas fa-check"></i> 5 integrations</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Custom workflows</li>
+                        <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <p>For growing businesses</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount monthly">99</span>
+                        <span class="amount yearly" style="display: none;">79</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 10 AI Agents</li>
+                        <li><i class="fas fa-check"></i> 25,000 tasks/month</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Unlimited integrations</li>
+                        <li><i class="fas fa-check"></i> Custom workflows</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p>For large organizations</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount monthly">249</span>
+                        <span class="amount yearly" style="display: none;">199</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited AI Agents</li>
+                        <li><i class="fas fa-check"></i> Unlimited tasks</li>
+                        <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                        <li><i class="fas fa-check"></i> Custom analytics</li>
+                        <li><i class="fas fa-check"></i> Unlimited integrations</li>
+                        <li><i class="fas fa-check"></i> Custom workflows</li>
+                        <li><i class="fas fa-check"></i> Full API access</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">Loved by Businesses Worldwide</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Mugen's lead generation agent increased our qualified leads by 300% in just 2 months. Absolutely game-changing!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>SK</span>
+                        </div>
+                        <div class="author-info">
+                            <h5>Sarah Kim</h5>
+                            <span>CEO, TechStart Inc.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The chatbot handles 80% of our customer inquiries automatically. Our team can finally focus on complex issues."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>MR</span>
+                        </div>
+                        <div class="author-info">
+                            <h5>Michael Rodriguez</h5>
+                            <span>Support Lead, CloudServ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Setup was incredibly easy. We were up and running in under an hour. The ROI has been incredible."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>EJ</span>
+                        </div>
+                        <div class="author-info">
+                            <h5>Emily Johnson</h5>
+                            <span>Founder, GrowthLabs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <span class="section-badge">About Mugen</span>
+                    <h2 class="section-title">Infinite Automation, Infinite Possibilities</h2>
+                    <p>Mugen (無限) means "infinite" in Japanese, and that's exactly what we offer — infinite possibilities for automation. Founded with a vision to democratize AI automation, we're making enterprise-grade AI accessible to businesses of all sizes.</p>
+                    <p>Our team of AI experts and engineers have built a platform that combines cutting-edge technology with user-friendly design. We believe that automation should be simple, powerful, and accessible to everyone.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="about-stat-number">2023</span>
+                            <span class="about-stat-label">Founded</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">50+</span>
+                            <span class="about-stat-label">Team Members</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">30+</span>
+                            <span class="about-stat-label">Countries</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-image">
+                        <div class="about-shape shape-1"></div>
+                        <div class="about-shape shape-2"></div>
+                        <div class="about-icon-grid">
+                            <div class="about-icon"><i class="fas fa-brain"></i></div>
+                            <div class="about-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="about-icon"><i class="fas fa-chart-pie"></i></div>
+                            <div class="about-icon"><i class="fas fa-rocket"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Automate Your Business?</h2>
+                <p>Join hundreds of companies already using Mugen to transform their operations.</p>
+                <div class="cta-buttons">
+                    <a href="#pricing" class="btn btn-primary btn-lg">
+                        Start Free Trial
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="btn btn-ghost btn-lg">
+                        <i class="fas fa-calendar"></i>
+                        Book a Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">∞</span>
+                        <span class="logo-text">Mugen</span>
+                    </div>
+                    <p>Empowering businesses with intelligent automation solutions that work 24/7.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#services">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mugen AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget Button -->
+    <div class="chat-widget">
+        <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+            <i class="fas fa-comments"></i>
+            <span class="chat-tooltip">Chat with us!</span>
+            <span class="chat-pulse"></span>
+        </button>
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <span>∞</span>
+                    <span class="online-indicator"></span>
+                </div>
+                <div class="chat-header-text">
+                    <h4>Mugen AI Assistant</h4>
+                    <span>Online • Typically replies instantly</span>
+                </div>
+            </div>
+            <button class="chat-close" id="chatClose" aria-label="Close chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <!-- n8n chat widget will be embedded here -->
+            <div class="chat-welcome">
+                <div class="welcome-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Hi there! 👋</h3>
+                <p>I'm your Mugen AI assistant. How can I help you today?</p>
+            </div>
+            <!-- Chat iframe container for n8n integration -->
+            <div id="n8nChatContainer" class="n8n-chat-container">
+                <!-- 
+                    TO INTEGRATE WITH YOUR N8N CHATBOT:
+                    Replace this comment with your n8n chat widget embed code.
+                    Example:
+                    <iframe 
+                        src="YOUR_N8N_WEBHOOK_URL" 
+                        frameborder="0" 
+                        style="width: 100%; height: 100%;">
+                    </iframe>
+                -->
+            </div>
+        </div>
+        <div class="chat-footer">
+            <form class="chat-input-form" id="chatForm">
+                <input type="text" placeholder="Type your message..." id="chatInput" autocomplete="off">
+                <button type="submit" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
