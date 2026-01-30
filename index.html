@@ -70,7 +70,7 @@
             </div>
             <div class="hero-stats animate-fade-in delay-3">
                 <div class="stat">
-                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-number" data-target="50">0</span>
                     <span class="stat-plus">+</span>
                     <span class="stat-label">Active Users</span>
                 </div>
@@ -179,22 +179,6 @@
                     </a>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3>Analytics Agent</h3>
-                    <p>Get actionable insights from your data automatically. Track KPIs and receive intelligent recommendations.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Real-time dashboards</li>
-                        <li><i class="fas fa-check"></i> Predictive analytics</li>
-                        <li><i class="fas fa-check"></i> Custom reports</li>
-                    </ul>
-                    <a href="#pricing" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-icon">
                         <i class="fas fa-robot"></i>
                         <div class="icon-glow"></div>
@@ -321,10 +305,35 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Pricing Plans</span>
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-subtitle">Choose the plan that fits your business needs. No hidden fees.</p>
+                <span class="section-badge">Service Pricing</span>
+                <h2 class="section-title">Choose Your Service & Plan</h2>
+                <p class="section-subtitle">Select the service you need and pick the tier that fits your business</p>
             </div>
+            
+            <!-- Service Selector Tabs -->
+            <div class="service-tabs">
+                <button class="service-tab" data-service="chatbot">
+                    <i class="fas fa-comments"></i>
+                    <span>Chatbot Agent</span>
+                </button>
+                <button class="service-tab active" data-service="leadgen">
+                    <i class="fas fa-users"></i>
+                    <span>Lead Generation</span>
+                </button>
+                <button class="service-tab" data-service="email">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Email Automation</span>
+                </button>
+                <button class="service-tab" data-service="scheduling">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Scheduling Agent</span>
+                </button>
+                <button class="service-tab" data-service="custom">
+                    <i class="fas fa-robot"></i>
+                    <span>Custom Solutions</span>
+                </button>
+            </div>
+
             <div class="pricing-toggle">
                 <span class="toggle-label active">Monthly</span>
                 <label class="toggle-switch">
@@ -333,73 +342,413 @@
                 </label>
                 <span class="toggle-label">Yearly <span class="save-badge">Save 20%</span></span>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-card" data-aos="fade-up">
-                    <div class="pricing-header">
-                        <h3>Starter</h3>
-                        <p>Perfect for small businesses</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="currency">$</span>
-                        <span class="amount monthly">49</span>
-                        <span class="amount yearly" style="display: none;">39</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 2 AI Agents</li>
-                        <li><i class="fas fa-check"></i> 5,000 tasks/month</li>
-                        <li><i class="fas fa-check"></i> Email support</li>
-                        <li><i class="fas fa-check"></i> Basic analytics</li>
-                        <li><i class="fas fa-check"></i> 5 integrations</li>
-                        <li class="disabled"><i class="fas fa-times"></i> Custom workflows</li>
-                        <li class="disabled"><i class="fas fa-times"></i> API access</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">Get Started</a>
+
+            <!-- Chatbot Agent Pricing -->
+            <div class="service-pricing" id="chatbot-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-comments"></i>
+                    <h3>Chatbot Agent</h3>
+                    <p>Intelligent customer support that works 24/7</p>
                 </div>
-                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Professional</h3>
-                        <p>For growing businesses</p>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-up">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <p>For small businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">29</span>
+                            <span class="amount yearly" style="display: none;">23</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 1,000 conversations/month</li>
+                            <li><i class="fas fa-check"></i> Basic NLP</li>
+                            <li><i class="fas fa-check"></i> 1 website integration</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Multi-language</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Human handoff</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Get Started</a>
                     </div>
-                    <div class="pricing-price">
-                        <span class="currency">$</span>
-                        <span class="amount monthly">99</span>
-                        <span class="amount yearly" style="display: none;">79</span>
-                        <span class="period">/month</span>
+                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Standard</h3>
+                            <p>For growing businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">79</span>
+                            <span class="amount yearly" style="display: none;">63</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 10,000 conversations/month</li>
+                            <li><i class="fas fa-check"></i> Advanced NLP</li>
+                            <li><i class="fas fa-check"></i> Multi-channel support</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Multi-language (5)</li>
+                            <li><i class="fas fa-check"></i> Human handoff</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 10 AI Agents</li>
-                        <li><i class="fas fa-check"></i> 25,000 tasks/month</li>
-                        <li><i class="fas fa-check"></i> Priority support</li>
-                        <li><i class="fas fa-check"></i> Advanced analytics</li>
-                        <li><i class="fas fa-check"></i> Unlimited integrations</li>
-                        <li><i class="fas fa-check"></i> Custom workflows</li>
-                        <li><i class="fas fa-check"></i> API access</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Get Started</a>
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <p>For enterprises</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">199</span>
+                            <span class="amount yearly" style="display: none;">159</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited conversations</li>
+                            <li><i class="fas fa-check"></i> Custom AI training</li>
+                            <li><i class="fas fa-check"></i> All channels</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> Unlimited languages</li>
+                            <li><i class="fas fa-check"></i> Advanced handoff</li>
+                            <li><i class="fas fa-check"></i> Full API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Contact Sales</a>
+                    </div>
                 </div>
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-header">
-                        <h3>Enterprise</h3>
-                        <p>For large organizations</p>
+            </div>
+
+            <!-- Lead Generation Pricing -->
+            <div class="service-pricing active" id="leadgen-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-users"></i>
+                    <h3>Lead Generation Agent</h3>
+                    <p>Fresh & high-quality leads - No recycled data - Built for conversions</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-up">
+                        <div class="pricing-header">
+                            <span class="package-badge starter">🟢 Starter</span>
+                            <h3>Starter Package</h3>
+                            <p>Perfect for small businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">149</span>
+                            <span class="amount yearly" style="display: none;">100</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>150</strong> Leads/week</li>
+                            <li><i class="fas fa-check"></i> Owners & Decision Makers</li>
+                            <li><i class="fas fa-check"></i> Industry & Location filtering</li>
+                            <li><i class="fas fa-check"></i> Emails + Phone numbers</li>
+                            <li><i class="fas fa-check"></i> Weekly Google Sheets delivery</li>
+                            <li><i class="fas fa-check"></i> Basic support</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Get Started</a>
                     </div>
-                    <div class="pricing-price">
-                        <span class="currency">$</span>
-                        <span class="amount monthly">249</span>
-                        <span class="amount yearly" style="display: none;">199</span>
-                        <span class="period">/month</span>
+                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <span class="package-badge growth">🟡 Growth</span>
+                            <h3>Growth Package</h3>
+                            <p>Best for rapid growth</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">349</span>
+                            <span class="amount yearly" style="display: none;">279</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>225</strong> Leads/week</li>
+                            <li><i class="fas fa-check"></i> Advanced filtering + Company size</li>
+                            <li><i class="fas fa-check"></i> Emails + Phone numbers</li>
+                            <li><i class="fas fa-check"></i> Cold email campaign setup</li>
+                            <li><i class="fas fa-check"></i> Personalized copy writing</li>
+                            <li><i class="fas fa-check"></i> Monthly optimization</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Unlimited AI Agents</li>
-                        <li><i class="fas fa-check"></i> Unlimited tasks</li>
-                        <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
-                        <li><i class="fas fa-check"></i> Custom analytics</li>
-                        <li><i class="fas fa-check"></i> Unlimited integrations</li>
-                        <li><i class="fas fa-check"></i> Custom workflows</li>
-                        <li><i class="fas fa-check"></i> Full API access</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">Contact Sales</a>
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-header">
+                            <span class="package-badge pro">🔴 Premium</span>
+                            <h3>Premium Package</h3>
+                            <p>For serious results</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">599</span>
+                            <span class="amount yearly" style="display: none;">479</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>350</strong> Leads/week</li>
+                            <li><i class="fas fa-check"></i> <strong>Daily</strong> delivery</li>
+                            <li><i class="fas fa-check"></i> Full details + LinkedIn</li>
+                            <li><i class="fas fa-check"></i> Full cold email management</li>
+                            <li><i class="fas fa-check"></i> Instant Telegram alerts</li>
+                            <li><i class="fas fa-check"></i> Custom requests + Lead replacement</li>
+                            <li><i class="fas fa-check"></i> Reply classification</li>
+                            <li><i class="fas fa-check"></i> Dedicated support</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Get started</a>
+                    </div>
+                </div>
+                <!-- Add-ons Section -->
+                <div class="addons-section" data-aos="fade-up">
+                    <h4><i class="fas fa-puzzle-piece"></i> Optional Add-Ons</h4>
+                    <div class="addons-grid">
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fab fa-telegram"></i>
+                                <span>Telegram reply alerts</span>
+                                <small>(Growth plan only)</small>
+                            </div>
+                            <span class="addon-price">+$29/mo</span>
+                        </div>
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Extra 100 leads/week</span>
+                            </div>
+                            <span class="addon-price">+$39/mo</span>
+                        </div>
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fas fa-crosshairs"></i>
+                                <span>Custom niche/country targeting</span>
+                            </div>
+                            <span class="addon-price">+$29/mo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Automation Pricing -->
+            <div class="service-pricing" id="email-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Email Automation Agent</h3>
+                    <p>Smart email campaigns that convert</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-up">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <p>For small businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">19</span>
+                            <span class="amount yearly" style="display: none;">15</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 5,000 emails/month</li>
+                            <li><i class="fas fa-check"></i> Basic templates</li>
+                            <li><i class="fas fa-check"></i> Email scheduling</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li class="disabled"><i class="fas fa-times"></i> A/B testing</li>
+                            <li class="disabled"><i class="fas fa-times"></i> AI personalization</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Standard</h3>
+                            <p>For growing businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">59</span>
+                            <span class="amount yearly" style="display: none;">47</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 25,000 emails/month</li>
+                            <li><i class="fas fa-check"></i> Custom templates</li>
+                            <li><i class="fas fa-check"></i> Smart scheduling</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> A/B testing</li>
+                            <li><i class="fas fa-check"></i> AI personalization</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <p>For enterprises</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">149</span>
+                            <span class="amount yearly" style="display: none;">119</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited emails</li>
+                            <li><i class="fas fa-check"></i> Drag & drop builder</li>
+                            <li><i class="fas fa-check"></i> Advanced automation</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> Advanced A/B testing</li>
+                            <li><i class="fas fa-check"></i> Full AI suite</li>
+                            <li><i class="fas fa-check"></i> Full API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scheduling Agent Pricing -->
+            <div class="service-pricing" id="scheduling-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Scheduling Agent</h3>
+                    <p>Automated appointment booking & reminders</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-up">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <p>For small businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">15</span>
+                            <span class="amount yearly" style="display: none;">12</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 100 bookings/month</li>
+                            <li><i class="fas fa-check"></i> 1 calendar</li>
+                            <li><i class="fas fa-check"></i> Email reminders</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li class="disabled"><i class="fas fa-times"></i> SMS reminders</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Team calendars</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Standard</h3>
+                            <p>For growing businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">39</span>
+                            <span class="amount yearly" style="display: none;">31</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 500 bookings/month</li>
+                            <li><i class="fas fa-check"></i> 5 calendars</li>
+                            <li><i class="fas fa-check"></i> Email + SMS reminders</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> SMS reminders</li>
+                            <li><i class="fas fa-check"></i> Team calendars</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <p>For enterprises</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">99</span>
+                            <span class="amount yearly" style="display: none;">79</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited bookings</li>
+                            <li><i class="fas fa-check"></i> Unlimited calendars</li>
+                            <li><i class="fas fa-check"></i> All notifications</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> WhatsApp reminders</li>
+                            <li><i class="fas fa-check"></i> Resource booking</li>
+                            <li><i class="fas fa-check"></i> Full API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Solutions Contact Form -->
+            <div class="service-pricing" id="custom-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>Custom AI Solutions</h3>
+                    <p>Tell us about your needs and we'll create a tailored solution for you</p>
+                </div>
+                <div class="custom-form-container" data-aos="fade-up">
+                    <div class="custom-form-info">
+                        <h4><i class="fas fa-lightbulb"></i> How it works</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Describe your business challenge</li>
+                            <li><i class="fas fa-check-circle"></i> Our team reviews your requirements</li>
+                            <li><i class="fas fa-check-circle"></i> We'll contact you with a custom quote</li>
+                            <li><i class="fas fa-check-circle"></i> Get a solution tailored to your needs</li>
+                        </ul>
+                        <div class="form-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Free consultation • No commitment required</span>
+                        </div>
+                    </div>
+                    <form class="custom-solution-form" id="customSolutionForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customName"><i class="fas fa-user"></i> Full Name *</label>
+                                <input type="text" id="customName" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customEmail"><i class="fas fa-envelope"></i> Email Address *</label>
+                                <input type="email" id="customEmail" name="email" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customCompany"><i class="fas fa-building"></i> Company Name</label>
+                                <input type="text" id="customCompany" name="company" placeholder="Your Company">
+                            </div>
+                            <div class="form-group">
+                                <label for="customPhone"><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="tel" id="customPhone" name="phone" placeholder="+1 (555) 000-0000">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="customBudget"><i class="fas fa-dollar-sign"></i> Estimated Budget</label>
+                            <select id="customBudget" name="budget">
+                                <option value="">Select your budget range</option>
+                                <option value="under-500">Under $500/month</option>
+                                <option value="500-1000">$500 - $1,000/month</option>
+                                <option value="1000-2500">$1,000 - $2,500/month</option>
+                                <option value="2500-5000">$2,500 - $5,000/month</option>
+                                <option value="over-5000">Over $5,000/month</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="customMessage"><i class="fas fa-comment-alt"></i> Describe Your Needs *</label>
+                            <textarea id="customMessage" name="message" rows="5" placeholder="Tell us about your business challenge, what you're trying to automate, and any specific requirements you have..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg full-width">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Submit Request</span>
+                        </button>
+                        <p class="form-note">We'll get back to you within 24 hours with a custom quote.</p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -485,15 +834,15 @@
                     <p>Our team of AI experts and engineers have built a platform that combines cutting-edge technology with user-friendly design. We believe that automation should be simple, powerful, and accessible to everyone.</p>
                     <div class="about-stats">
                         <div class="about-stat">
-                            <span class="about-stat-number">2023</span>
+                            <span class="about-stat-number">2025</span>
                             <span class="about-stat-label">Founded</span>
                         </div>
                         <div class="about-stat">
-                            <span class="about-stat-number">50+</span>
+                            <span class="about-stat-number">10+</span>
                             <span class="about-stat-label">Team Members</span>
                         </div>
                         <div class="about-stat">
-                            <span class="about-stat-number">30+</span>
+                            <span class="about-stat-number">5+</span>
                             <span class="about-stat-label">Countries</span>
                         </div>
                     </div>
@@ -601,6 +950,79 @@
             <span class="chat-tooltip">Chat with us!</span>
             <span class="chat-pulse"></span>
         </button>
+    </div>
+
+    <!-- Service Registration Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Form Content -->
+            <div class="modal-form-content" id="modalFormContent">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Get Started with <span id="modalServiceName">Service</span></h3>
+                    <div class="selected-plan">
+                        <span class="plan-badge" id="modalPlanBadge">Standard Plan</span>
+                    </div>
+                </div>
+                <form class="modal-form" id="serviceRegistrationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regName"><i class="fas fa-user"></i> Full Name *</label>
+                            <input type="text" id="regName" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail"><i class="fas fa-envelope"></i> Email Address *</label>
+                            <input type="email" id="regEmail" name="email" placeholder="john@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regCompany"><i class="fas fa-building"></i> Company Name</label>
+                            <input type="text" id="regCompany" name="company" placeholder="Your Company">
+                        </div>
+                        <div class="form-group">
+                            <label for="regPhone"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="regPhone" name="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="regMessage"><i class="fas fa-comment-alt"></i> Additional Notes (Optional)</label>
+                        <textarea id="regMessage" name="message" rows="3" placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                    <input type="hidden" id="selectedService" name="service" value="">
+                    <input type="hidden" id="selectedPlan" name="plan" value="">
+                    <button type="submit" class="btn btn-primary btn-lg full-width">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Submit & Get Started</span>
+                    </button>
+                    <p class="form-note">We'll contact you within 24 hours to set up your account.</p>
+                </form>
+            </div>
+            
+            <!-- Success Message -->
+            <div class="modal-success" id="modalSuccess" style="display: none;">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Thank You! 🎉</h3>
+                <p class="success-message">Your request has been received successfully!</p>
+                <p class="success-detail">We'll contact you via email at <strong id="userEmailDisplay"></strong> as soon as possible.</p>
+                <div class="success-service-info">
+                    <span id="successServiceName"></span>
+                    <span id="successPlanName"></span>
+                </div>
+                <button class="btn btn-primary" id="closeSuccessBtn">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>Got it!</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- Chat Window -->

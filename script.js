@@ -111,6 +111,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ===================================
+    // SERVICE TABS (Pricing Section)
+    // ===================================
+    const serviceTabs = document.querySelectorAll('.service-tab');
+    const servicePricings = document.querySelectorAll('.service-pricing');
+
+    serviceTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const service = this.getAttribute('data-service');
+            
+            // Remove active class from all tabs
+            serviceTabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Hide all service pricing sections
+            servicePricings.forEach(pricing => pricing.classList.remove('active'));
+            // Show the selected service pricing
+            const targetPricing = document.getElementById(`${service}-pricing`);
+            if (targetPricing) {
+                targetPricing.classList.add('active');
+            }
+        });
+    });
+
+    // ===================================
     // PRICING TOGGLE
     // ===================================
     const pricingToggle = document.getElementById('pricing-toggle');
@@ -130,6 +155,148 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleLabels[0].classList.add('active');
             toggleLabels[1].classList.remove('active');
         }
+    });
+
+    // ===================================
+    // SERVICE REGISTRATION MODAL
+    // ===================================
+    const serviceModal = document.getElementById('serviceModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalServiceName = document.getElementById('modalServiceName');
+    const modalPlanBadge = document.getElementById('modalPlanBadge');
+    const selectedServiceInput = document.getElementById('selectedService');
+    const selectedPlanInput = document.getElementById('selectedPlan');
+    const serviceRegForm = document.getElementById('serviceRegistrationForm');
+
+    // Service names mapping
+    const serviceNames = {
+        'chatbot': 'Chatbot Agent',
+        'leadgen': 'Lead Generation',
+        'email': 'Email Automation',
+        'scheduling': 'Scheduling Agent'
+    };
+
+    // Get all pricing card buttons (except in custom-pricing)
+    const pricingButtons = document.querySelectorAll('.service-pricing:not(#custom-pricing) .pricing-card .btn');
+
+    pricingButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get the pricing card
+            const pricingCard = this.closest('.pricing-card');
+            const pricingSection = this.closest('.service-pricing');
+            
+            // Get plan name
+            const planName = pricingCard.querySelector('.pricing-header h3').textContent;
+            
+            // Get service name from section id
+            const sectionId = pricingSection.id;
+            const serviceKey = sectionId.replace('-pricing', '');
+            const serviceName = serviceNames[serviceKey] || 'Service';
+            
+            // Get price
+            const priceElement = pricingCard.querySelector('.amount:not([style*="display: none"])');
+            const price = priceElement ? priceElement.textContent : '';
+            
+            // Update modal content
+            modalServiceName.textContent = serviceName;
+            modalPlanBadge.textContent = `${planName} Plan - $${price}/month`;
+            selectedServiceInput.value = serviceName;
+            selectedPlanInput.value = planName;
+            
+            // Update modal icon based on service
+            const modalIcon = document.querySelector('.modal-icon i');
+            const iconMap = {
+                'chatbot': 'fa-comments',
+                'leadgen': 'fa-users',
+                'email': 'fa-envelope-open-text',
+                'scheduling': 'fa-calendar-check'
+            };
+            modalIcon.className = `fas ${iconMap[serviceKey] || 'fa-rocket'}`;
+            
+            // Show modal
+            serviceModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Function to reset and close modal
+    function closeServiceModal() {
+        const modalFormContent = document.getElementById('modalFormContent');
+        const modalSuccess = document.getElementById('modalSuccess');
+        
+        // Reset modal state
+        if (modalFormContent) modalFormContent.style.display = 'block';
+        if (modalSuccess) modalSuccess.style.display = 'none';
+        
+        serviceModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close modal
+    modalClose?.addEventListener('click', closeServiceModal);
+
+    // Close modal on overlay click
+    serviceModal?.addEventListener('click', function(e) {
+        if (e.target === serviceModal) {
+            closeServiceModal();
+        }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && serviceModal?.classList.contains('active')) {
+            closeServiceModal();
+        }
+    });
+
+    // Handle form submission
+    serviceRegForm?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+        
+        console.log('Registration Data:', data);
+        
+        // Here you can send the data to your backend/webhook
+        // Example: fetch('YOUR_WEBHOOK_URL', { method: 'POST', body: JSON.stringify(data) })
+        
+        // Show success message inside modal
+        const modalFormContent = document.getElementById('modalFormContent');
+        const modalSuccess = document.getElementById('modalSuccess');
+        const userEmailDisplay = document.getElementById('userEmailDisplay');
+        const successServiceName = document.getElementById('successServiceName');
+        const successPlanName = document.getElementById('successPlanName');
+        
+        // Update success message with user data
+        userEmailDisplay.textContent = data.email;
+        successServiceName.textContent = data.service;
+        successPlanName.textContent = data.plan;
+        
+        // Hide form and show success message
+        modalFormContent.style.display = 'none';
+        modalSuccess.style.display = 'block';
+        
+        // Reset form for next time
+        this.reset();
+    });
+    
+    // Close success message and modal
+    const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+    closeSuccessBtn?.addEventListener('click', function() {
+        const modalFormContent = document.getElementById('modalFormContent');
+        const modalSuccess = document.getElementById('modalSuccess');
+        
+        // Reset modal state
+        modalFormContent.style.display = 'block';
+        modalSuccess.style.display = 'none';
+        
+        // Close modal
+        serviceModal.classList.remove('active');
+        document.body.style.overflow = '';
     });
 
     // ===================================
