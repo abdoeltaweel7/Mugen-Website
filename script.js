@@ -252,36 +252,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Handle form submission
-    serviceRegForm?.addEventListener('submit', function(e) {
+    serviceRegForm?.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Get form data
         const formData = new FormData(this);
+        formData.append('_formType', 'Service Registration');
+        
         const data = Object.fromEntries(formData.entries());
         
-        console.log('Registration Data:', data);
-        
-        // Here you can send the data to your backend/webhook
-        // Example: fetch('YOUR_WEBHOOK_URL', { method: 'POST', body: JSON.stringify(data) })
-        
-        // Show success message inside modal
-        const modalFormContent = document.getElementById('modalFormContent');
-        const modalSuccess = document.getElementById('modalSuccess');
-        const userEmailDisplay = document.getElementById('userEmailDisplay');
-        const successServiceName = document.getElementById('successServiceName');
-        const successPlanName = document.getElementById('successPlanName');
-        
-        // Update success message with user data
-        userEmailDisplay.textContent = data.email;
-        successServiceName.textContent = data.service;
-        successPlanName.textContent = data.plan;
-        
-        // Hide form and show success message
-        modalFormContent.style.display = 'none';
-        modalSuccess.style.display = 'block';
-        
-        // Reset form for next time
-        this.reset();
+        // Send to Formspree
+        try {
+            const response = await fetch('https://formspree.io/f/xwvbgobe', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Show success message inside modal
+                const modalFormContent = document.getElementById('modalFormContent');
+                const modalSuccess = document.getElementById('modalSuccess');
+                const userEmailDisplay = document.getElementById('userEmailDisplay');
+                const successServiceName = document.getElementById('successServiceName');
+                const successPlanName = document.getElementById('successPlanName');
+                
+                // Update success message with user data
+                userEmailDisplay.textContent = data.email;
+                successServiceName.textContent = data.service;
+                successPlanName.textContent = data.plan;
+                
+                // Hide form and show success message
+                modalFormContent.style.display = 'none';
+                modalSuccess.style.display = 'block';
+                
+                // Reset form for next time
+                this.reset();
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Something went wrong. Please try again.');
+        }
     });
     
     // Close success message and modal
@@ -297,6 +312,170 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close modal
         serviceModal.classList.remove('active');
         document.body.style.overflow = '';
+    });
+
+    // ===================================
+    // AI ASSISTANT REQUEST MODAL
+    // ===================================
+    const assistantModal = document.getElementById('assistantModal');
+    const assistantModalClose = document.getElementById('assistantModalClose');
+    const assistantModalName = document.getElementById('assistantModalName');
+    const assistantRequestForm = document.getElementById('assistantRequestForm');
+    const openAssistantModalBtn = document.getElementById('openAssistantModalBtn');
+
+    // Open modal when clicking Get Custom Quote button
+    openAssistantModalBtn?.addEventListener('click', function() {
+        // Show modal
+        assistantModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Function to reset and close assistant modal
+    function closeAssistantModal() {
+        const assistantModalFormContent = document.getElementById('assistantModalFormContent');
+        const assistantModalSuccess = document.getElementById('assistantModalSuccess');
+        
+        // Reset modal state
+        if (assistantModalFormContent) assistantModalFormContent.style.display = 'block';
+        if (assistantModalSuccess) assistantModalSuccess.style.display = 'none';
+        
+        assistantModal?.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close assistant modal
+    assistantModalClose?.addEventListener('click', closeAssistantModal);
+
+    // Close assistant modal on overlay click
+    assistantModal?.addEventListener('click', function(e) {
+        if (e.target === assistantModal) {
+            closeAssistantModal();
+        }
+    });
+
+    // Close assistant modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && assistantModal?.classList.contains('active')) {
+            closeAssistantModal();
+        }
+    });
+
+    // Handle assistant form submission
+    assistantRequestForm?.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        formData.append('_formType', 'AI Assistant Request');
+        
+        // Get all checked integrations
+        const integrations = [];
+        this.querySelectorAll('input[name="integrations"]:checked').forEach(checkbox => {
+            integrations.push(checkbox.value);
+        });
+        formData.set('integrations', integrations.join(', '));
+        
+        const data = Object.fromEntries(formData.entries());
+        
+        // Send to Formspree
+        try {
+            const response = await fetch('https://formspree.io/f/xwvbgobe', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Show success message inside modal
+                const assistantModalFormContent = document.getElementById('assistantModalFormContent');
+                const assistantModalSuccess = document.getElementById('assistantModalSuccess');
+                const assistantUserEmailDisplay = document.getElementById('assistantUserEmailDisplay');
+                const successAssistantType = document.getElementById('successAssistantType');
+                
+                // Update success message with user data
+                assistantUserEmailDisplay.textContent = data.email;
+                successAssistantType.textContent = data.assistantType;
+                
+                // Hide form and show success message
+                assistantModalFormContent.style.display = 'none';
+                assistantModalSuccess.style.display = 'block';
+                
+                // Reset form for next time
+                this.reset();
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Something went wrong. Please try again.');
+        }
+    });
+    
+    // Close assistant success message and modal
+    const closeAssistantSuccessBtn = document.getElementById('closeAssistantSuccessBtn');
+    closeAssistantSuccessBtn?.addEventListener('click', function() {
+        const assistantModalFormContent = document.getElementById('assistantModalFormContent');
+        const assistantModalSuccess = document.getElementById('assistantModalSuccess');
+        
+        // Reset modal state
+        assistantModalFormContent.style.display = 'block';
+        assistantModalSuccess.style.display = 'none';
+        
+        // Close modal
+        assistantModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // ===================================
+    // CUSTOM SOLUTIONS FORM
+    // ===================================
+    const customSolutionForm = document.getElementById('customSolutionForm');
+    
+    customSolutionForm?.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        // Get form data
+        const formData = new FormData(this);
+        formData.append('_formType', 'Custom Solution Request');
+        
+        // Send to Formspree
+        try {
+            const response = await fetch('https://formspree.io/f/xwvbgobe', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Show success message
+                this.innerHTML = `
+                    <div class="form-success-message">
+                        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                        <h4>Thank You! 🎉</h4>
+                        <p>Your request has been submitted successfully.</p>
+                        <p>We'll contact you within 24 hours with a custom quote.</p>
+                    </div>
+                `;
+            } else {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+            alert('Something went wrong. Please try again.');
+        }
     });
 
     // ===================================
@@ -451,7 +630,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // N8N INTEGRATION
         // Your n8n webhook URL
         // ===================================
-        const N8N_WEBHOOK_URL = 'http://localhost:5678/webhook/244a7708-aacf-4031-9097-1e4ef4c17758/chat';
+        const N8N_WEBHOOK_URL = 'https://abdoeltaweels.app.n8n.cloud/webhook/a99e2406-d2fe-4e29-954b-cdb5b9959022/chat';
 
         try {
             const response = await fetch(N8N_WEBHOOK_URL, {
