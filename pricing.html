@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Mugen AI</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <span class="logo-icon">∞</span>
+                    <span class="logo-text">Mugen</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <a href="#pricing" class="nav-cta">Get Started</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Page Hero -->
+    <section class="pricing-page-hero">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Transparent Pricing</span>
+                <h1 class="section-title">Choose Your Perfect Plan</h1>
+                <p class="section-subtitle">All our services and packages in one place. Find the perfect solution for your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing pricing-page">
+        <div class="container">
+            
+            <!-- Service Selector Tabs -->
+            <div class="service-tabs">
+                <button class="service-tab active" data-service="leadgen">
+                    <i class="fas fa-users"></i>
+                    <span>Lead Generation</span>
+                </button>
+                <button class="service-tab" data-service="chatbot">
+                    <i class="fas fa-comments"></i>
+                    <span>Chatbot Agent</span>
+                </button>
+                <button class="service-tab" data-service="email">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Email Automation</span>
+                </button>
+                <button class="service-tab" data-service="scheduling">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Scheduling Agent</span>
+                </button>
+                <button class="service-tab" data-service="aiassistant">
+                    <i class="fas fa-brain"></i>
+                    <span>AI Assistant</span>
+                </button>
+                <button class="service-tab" data-service="custom">
+                    <i class="fas fa-robot"></i>
+                    <span>Custom Solutions</span>
+                </button>
+            </div>
+
+            <div class="pricing-toggle">
+                <span class="toggle-label active">Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Yearly <span class="save-badge">Save 20%</span></span>
+            </div>
+
+            <!-- Lead Generation Pricing -->
+            <div class="service-pricing active" id="leadgen-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-users"></i>
+                    <h3>Lead Generation Agent</h3>
+                    <p>Fresh & high-quality leads - No recycled data - Built for conversions</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="package-badge starter">🟢 Starter</span>
+                            <h3>Starter Package</h3>
+                            <p>Perfect for small businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">149</span>
+                            <span class="amount yearly" style="display: none;">100</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>150</strong> Leads/week</li>
+                            <li><i class="fas fa-check"></i> Owners & Decision Makers</li>
+                            <li><i class="fas fa-check"></i> Industry & Location filtering</li>
+                            <li><i class="fas fa-check"></i> Emails + Phone numbers</li>
+                            <li><i class="fas fa-check"></i> Weekly Google Sheets delivery</li>
+                            <li><i class="fas fa-check"></i> Basic support</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-outline">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <span class="package-badge growth">🟡 Growth</span>
+                            <h3>Growth Package</h3>
+                            <p>Best for rapid growth</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">349</span>
+                            <span class="amount yearly" style="display: none;">279</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>225</strong> Leads/week</li>
+                            <li><i class="fas fa-check"></i> Advanced filtering + Company size</li>
+                            <li><i class="fas fa-check"></i> Emails + Phone numbers</li>
+                            <li><i class="fas fa-check"></i> Cold email campaign setup</li>
+                            <li><i class="fas fa-check"></i> Personalized copy writing</li>
+                            <li><i class="fas fa-check"></i> Monthly optimization</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="package-badge pro">🔴 Premium</span>
+                            <h3>Premium Package</h3>
+                            <p>For serious results</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">599</span>
+                            <span class="amount yearly" style="display: none;">479</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>350</strong> Leads/week</li>
+                            <li><i class="fas fa-check"></i> <strong>Daily</strong> delivery</li>
+                            <li><i class="fas fa-check"></i> Full details + LinkedIn</li>
+                            <li><i class="fas fa-check"></i> Full cold email management</li>
+                            <li><i class="fas fa-check"></i> Instant Telegram alerts</li>
+                            <li><i class="fas fa-check"></i> Custom requests + Lead replacement</li>
+                            <li><i class="fas fa-check"></i> Reply classification</li>
+                            <li><i class="fas fa-check"></i> Dedicated support</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-outline">Get started</a>
+                    </div>
+                </div>
+                <!-- Add-ons Section -->
+                <div class="addons-section">
+                    <h4><i class="fas fa-puzzle-piece"></i> Optional Add-Ons</h4>
+                    <div class="addons-grid">
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fab fa-telegram"></i>
+                                <span>Telegram reply alerts</span>
+                                <small>(Growth plan only)</small>
+                            </div>
+                            <span class="addon-price">+$29/mo</span>
+                        </div>
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Extra 100 leads/week</span>
+                            </div>
+                            <span class="addon-price">+$39/mo</span>
+                        </div>
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fas fa-crosshairs"></i>
+                                <span>Custom niche/country targeting</span>
+                            </div>
+                            <span class="addon-price">+$29/mo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chatbot Agent Pricing -->
+            <div class="service-pricing" id="chatbot-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-comments"></i>
+                    <h3>Chatbot Agent</h3>
+                    <p>RAG-powered intelligent chatbots for your business</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>🟢 Starter RAG</h3>
+                            <p>Perfect for small brands or MVP</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">99</span>
+                            <span class="amount yearly" style="display: none;">79</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 1 RAG chatbot</li>
+                            <li><i class="fas fa-check"></i> Connect 1 source (PDFs/Website/Docs)</li>
+                            <li><i class="fas fa-check"></i> Up to 1,000 documents/pages</li>
+                            <li><i class="fas fa-check"></i> Basic embeddings</li>
+                            <li><i class="fas fa-check"></i> Smart FAQ responses</li>
+                            <li><i class="fas fa-check"></i> Simple management dashboard</li>
+                            <li><i class="fas fa-check"></i> Monthly knowledge updates</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                        </ul>
+                        <p class="use-case"><i class="fas fa-lightbulb"></i> Company website – FAQ – Portfolio – Services page</p>
+                        <a href="index.html#pricing" class="btn btn-outline">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>🔵 Growth RAG</h3>
+                            <p>For businesses with daily customer interactions</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">249</span>
+                            <span class="amount yearly" style="display: none;">199</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 1 Advanced RAG chatbot</li>
+                            <li><i class="fas fa-check"></i> Multiple sources (Website + PDFs + Notion/Docs)</li>
+                            <li><i class="fas fa-check"></i> Up to 5,000 documents</li>
+                            <li><i class="fas fa-check"></i> Smart chunking + optimized retrieval</li>
+                            <li><i class="fas fa-check"></i> Context memory (session awareness)</li>
+                            <li><i class="fas fa-check"></i> Custom prompt for your business</li>
+                            <li><i class="fas fa-check"></i> Weekly knowledge updates</li>
+                            <li><i class="fas fa-check"></i> Basic analytics (questions & issues)</li>
+                            <li><i class="fas fa-check"></i> Email + Chat support</li>
+                        </ul>
+                        <p class="use-case"><i class="fas fa-lightbulb"></i> Marketing agency – SaaS – Ecommerce support</p>
+                        <a href="index.html#pricing" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>🔴 Pro RAG</h3>
+                            <p>Heavy-duty solution for enterprises</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">499</span>
+                            <span class="amount yearly" style="display: none;">399</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Up to 3 RAG chatbots</li>
+                            <li><i class="fas fa-check"></i> Unlimited sources</li>
+                            <li><i class="fas fa-check"></i> Up to 20,000 documents</li>
+                            <li><i class="fas fa-check"></i> Advanced vector database (Pinecone/Supabase)</li>
+                            <li><i class="fas fa-check"></i> Multi-language support (AR/EN)</li>
+                            <li><i class="fas fa-check"></i> User intent detection</li>
+                            <li><i class="fas fa-check"></i> CRM / Lead capture integration</li>
+                            <li><i class="fas fa-check"></i> Custom workflows</li>
+                            <li><i class="fas fa-check"></i> Realtime / On-demand knowledge updates</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics dashboard</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                        <p class="use-case"><i class="fas fa-lightbulb"></i> Enterprise – Large platforms – Internal knowledge base</p>
+                        <a href="index.html#pricing" class="btn btn-outline">Contact Sales</a>
+                    </div>
+                </div>
+                
+                <!-- Add-ons Section -->
+                <div class="addons-section">
+                    <h4><i class="fas fa-plus-circle"></i> Optional Add-ons</h4>
+                    <div class="addons-grid">
+                        <div class="addon-item">
+                            <span class="addon-name"><i class="fas fa-robot"></i> Extra chatbot</span>
+                            <span class="addon-price">$99/month</span>
+                        </div>
+                        <div class="addon-item">
+                            <span class="addon-name"><i class="fab fa-whatsapp"></i> WhatsApp integration</span>
+                            <span class="addon-price">$149 setup + $49/month</span>
+                        </div>
+                        <div class="addon-item">
+                            <span class="addon-name"><i class="fab fa-telegram"></i> Telegram / Messenger</span>
+                            <span class="addon-price">$49</span>
+                        </div>
+                        <div class="addon-item">
+                            <span class="addon-name"><i class="fas fa-microphone"></i> Voice chatbot (beta)</span>
+                            <span class="addon-price">$199</span>
+                        </div>
+                        <div class="addon-item">
+                            <span class="addon-name"><i class="fas fa-sync-alt"></i> Monthly auto knowledge refresh</span>
+                            <span class="addon-price">$79/month</span>
+                        </div>
+                        <div class="addon-item">
+                            <span class="addon-name"><i class="fas fa-palette"></i> Custom UI/UX for chatbot</span>
+                            <span class="addon-price">$149 one-time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Automation Pricing -->
+            <div class="service-pricing" id="email-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Email Automation Agent</h3>
+                    <p>Smart email campaigns that convert</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <p>For small businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">19</span>
+                            <span class="amount yearly" style="display: none;">15</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 5,000 emails/month</li>
+                            <li><i class="fas fa-check"></i> Basic templates</li>
+                            <li><i class="fas fa-check"></i> Email scheduling</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li class="disabled"><i class="fas fa-times"></i> A/B testing</li>
+                            <li class="disabled"><i class="fas fa-times"></i> AI personalization</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-outline">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Standard</h3>
+                            <p>For growing businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">59</span>
+                            <span class="amount yearly" style="display: none;">47</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 25,000 emails/month</li>
+                            <li><i class="fas fa-check"></i> Custom templates</li>
+                            <li><i class="fas fa-check"></i> Smart scheduling</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> A/B testing</li>
+                            <li><i class="fas fa-check"></i> AI personalization</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API access</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <p>For enterprises</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">149</span>
+                            <span class="amount yearly" style="display: none;">119</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited emails</li>
+                            <li><i class="fas fa-check"></i> Drag & drop builder</li>
+                            <li><i class="fas fa-check"></i> Advanced automation</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> Advanced A/B testing</li>
+                            <li><i class="fas fa-check"></i> Full AI suite</li>
+                            <li><i class="fas fa-check"></i> Full API access</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-outline">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scheduling Agent Pricing -->
+            <div class="service-pricing" id="scheduling-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Scheduling Agent</h3>
+                    <p>Automated appointment booking & calendar management</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="package-badge starter">🟢 Starter</span>
+                            <h3>Starter</h3>
+                            <p>Basic booking setup</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">79</span>
+                            <span class="amount yearly" style="display: none;">63</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Booking system setup</li>
+                            <li><i class="fas fa-check"></i> Google Calendar integration</li>
+                            <li><i class="fas fa-check"></i> One service type</li>
+                            <li><i class="fas fa-check"></i> Email notifications</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-outline">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <span class="package-badge growth">🔵 Growth</span>
+                            <h3>Growth</h3>
+                            <p>Advanced automation</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">179</span>
+                            <span class="amount yearly" style="display: none;">143</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Multiple service types</li>
+                            <li><i class="fas fa-check"></i> Automated reminders</li>
+                            <li><i class="fas fa-check"></i> Client time-zone handling</li>
+                            <li><i class="fas fa-check"></i> Reschedule & cancel logic</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="package-badge pro">🔴 Pro</span>
+                            <h3>Pro</h3>
+                            <p>Full-featured solution</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">299</span>
+                            <span class="amount yearly" style="display: none;">239</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Multi-team scheduling</li>
+                            <li><i class="fas fa-check"></i> CRM + Email sync</li>
+                            <li><i class="fas fa-check"></i> Custom rules</li>
+                            <li><i class="fas fa-check"></i> Analytics & reports</li>
+                        </ul>
+                        <a href="index.html#pricing" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+                <!-- Add-ons Section -->
+                <div class="addons-section">
+                    <h4><i class="fas fa-puzzle-piece"></i> Optional Add-Ons</h4>
+                    <div class="addons-grid">
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fas fa-sms"></i>
+                                <span>SMS reminders</span>
+                            </div>
+                            <span class="addon-price">+$25</span>
+                        </div>
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp notifications</span>
+                            </div>
+                            <span class="addon-price">+$40</span>
+                        </div>
+                        <div class="addon-item">
+                            <div class="addon-info">
+                                <i class="fas fa-palette"></i>
+                                <span>Custom booking page</span>
+                            </div>
+                            <span class="addon-price">+$60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Assistant Pricing -->
+            <div class="service-pricing" id="aiassistant-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI Assistant</h3>
+                    <p>Choose the AI Assistant that fits your business needs</p>
+                </div>
+                
+                <!-- Assistant Types Grid -->
+                <div class="assistant-types-grid">
+                    <div class="assistant-type-card">
+                        <div class="assistant-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>💬 Customer Support Assistant</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Responds to customers 24/7</li>
+                            <li><i class="fas fa-check"></i> Understands questions intelligently</li>
+                            <li><i class="fas fa-check"></i> Connected to your website or files (RAG)</li>
+                            <li><i class="fas fa-check"></i> Reduces support team workload</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="assistant-type-card">
+                        <div class="assistant-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>📈 Sales Assistant</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Engages with potential customers</li>
+                            <li><i class="fas fa-check"></i> Answers sales-related questions</li>
+                            <li><i class="fas fa-check"></i> Captures leads automatically</li>
+                            <li><i class="fas fa-check"></i> Converts visitors into customers</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="assistant-type-card">
+                        <div class="assistant-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h4>🧠 Internal Team Assistant</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Internal assistant for your team</li>
+                            <li><i class="fas fa-check"></i> Searches company files instantly</li>
+                            <li><i class="fas fa-check"></i> Answers employee questions quickly</li>
+                            <li><i class="fas fa-check"></i> Saves valuable team time</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="assistant-type-card">
+                        <div class="assistant-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>📅 Scheduling & Booking Assistant</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Books appointments automatically</li>
+                            <li><i class="fas fa-check"></i> Integrates with Google Calendar</li>
+                            <li><i class="fas fa-check"></i> Eliminates repetitive messages</li>
+                            <li><i class="fas fa-check"></i> Perfect for clinics, coaching & services</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="assistant-type-card">
+                        <div class="assistant-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>⚙️ AI Assistant with Actions</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Doesn't just reply... it executes!</li>
+                            <li><i class="fas fa-check"></i> Sends emails automatically</li>
+                            <li><i class="fas fa-check"></i> Updates Google Sheets</li>
+                            <li><i class="fas fa-check"></i> Interacts with CRM & triggers automations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="assistant-type-card">
+                        <div class="assistant-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h4>🔗 AI Assistant with Integrations</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> WhatsApp / Telegram / Website</li>
+                            <li><i class="fas fa-check"></i> CRM systems integration</li>
+                            <li><i class="fas fa-check"></i> Email tools connection</li>
+                            <li><i class="fas fa-check"></i> Custom APIs support</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Customization Features -->
+                <div class="customization-section">
+                    <div class="customization-header">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h4>🧩 Fully Customizable</h4>
+                        <p>Every AI Assistant can include:</p>
+                    </div>
+                    <div class="customization-features">
+                        <div class="custom-feature">
+                            <i class="fas fa-database"></i>
+                            <span>RAG (PDFs – Websites – Docs)</span>
+                        </div>
+                        <div class="custom-feature">
+                            <i class="fas fa-language"></i>
+                            <span>Multi-language (Arabic / English)</span>
+                        </div>
+                        <div class="custom-feature">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Custom personality for your brand</span>
+                        </div>
+                        <div class="custom-feature">
+                            <i class="fas fa-brain"></i>
+                            <span>Memory & context awareness</span>
+                        </div>
+                        <div class="custom-feature">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics & reports</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pricing Note -->
+                <div class="pricing-note-section">
+                    <div class="pricing-note-card">
+                        <div class="pricing-note-icon">
+                            <i class="fas fa-comments-dollar"></i>
+                        </div>
+                        <div class="pricing-note-content">
+                            <h4>💬 Custom Pricing</h4>
+                            <p>There's no fixed price because every business is different.</p>
+                            <div class="pricing-factors">
+                                <span><i class="fas fa-arrow-right"></i> Type of Assistant</span>
+                                <span><i class="fas fa-arrow-right"></i> Number of Integrations</span>
+                                <span><i class="fas fa-arrow-right"></i> Data volume</span>
+                                <span><i class="fas fa-arrow-right"></i> Monthly usage</span>
+                            </div>
+                            <a href="index.html#pricing" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Get Custom Quote</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Solutions -->
+            <div class="service-pricing" id="custom-pricing">
+                <div class="service-pricing-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>Custom AI Solutions</h3>
+                    <p>Tell us about your needs and we'll create a tailored solution for you</p>
+                </div>
+                <div class="custom-form-container">
+                    <div class="custom-form-info">
+                        <h4><i class="fas fa-lightbulb"></i> How it works</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Describe your business challenge</li>
+                            <li><i class="fas fa-check-circle"></i> Our team reviews your requirements</li>
+                            <li><i class="fas fa-check-circle"></i> We'll contact you with a custom quote</li>
+                            <li><i class="fas fa-check-circle"></i> Get a solution tailored to your needs</li>
+                        </ul>
+                        <div class="form-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Free consultation • No commitment required</span>
+                        </div>
+                    </div>
+                    <div class="custom-cta">
+                        <p>Ready to discuss your custom solution?</p>
+                        <a href="index.html#pricing" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Automate Your Business?</h2>
+                <p>Get started with Mugen AI today and transform your workflow</p>
+                <a href="index.html#pricing" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket"></i>
+                    <span>Get Started Now</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">∞</span>
+                        <span class="logo-text">Mugen</span>
+                    </div>
+                    <p>Empowering businesses with intelligent automation solutions that work 24/7.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mugen AI. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="terms.html">Terms</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="refund.html">Refunds</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

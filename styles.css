@@ -3281,6 +3281,83 @@ body {
     color: var(--primary-purple-light);
 }
 
+/* ===================================
+   PRICING PAGE STYLES
+   =================================== */
+
+.pricing-page-hero {
+    padding: 140px 0 40px;
+    text-align: center;
+}
+
+.pricing-page-hero .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.pricing-page-hero .section-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pricing.pricing-page {
+    padding-top: 20px;
+}
+
+.custom-cta {
+    text-align: center;
+    padding: 40px;
+    background: var(--gradient-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+}
+
+.custom-cta p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.cta-section {
+    padding: 80px 0;
+    background: var(--gradient-card);
+    border-top: 1px solid var(--dark-border);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.cta-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Responsive Pricing Page */
+@media (max-width: 768px) {
+    .pricing-page-hero {
+        padding: 120px 0 30px;
+    }
+    
+    .pricing-page-hero .section-title {
+        font-size: 2rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
 /* Responsive Legal Pages */
 @media (max-width: 768px) {
     .legal-header h1 {
