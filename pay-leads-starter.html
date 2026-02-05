@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe - Leads Starter Plan | Mugen AI</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prevent indexing -->
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        /* Payment Page Specific Styles */
+        .payment-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .payment-container {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .payment-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--dark-border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .payment-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .payment-logo a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .payment-logo .logo-icon {
+            font-size: 2.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .payment-logo .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .plan-badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--primary-purple-light);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .payment-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .payment-subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .plan-details {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: var(--radius-md);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .plan-price {
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .plan-price .currency {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .plan-price .amount {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .plan-price .period {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .plan-features {
+            list-style: none;
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .plan-features li i {
+            color: var(--primary-purple-light);
+            font-size: 0.9rem;
+        }
+
+        .paypal-section {
+            text-align: center;
+        }
+
+        .paypal-section p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        #paypal-button-container-P-74X32464HD191010KNGCMONQ {
+            min-height: 55px;
+        }
+
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 25px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .secure-badge i {
+            color: #22c55e;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+
+        .back-link:hover {
+            color: var(--primary-purple-light);
+        }
+
+        .back-link i {
+            margin-right: 5px;
+        }
+
+        /* Success Message Styling */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message i {
+            font-size: 4rem;
+            color: #22c55e;
+            margin-bottom: 20px;
+        }
+
+        .success-message h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .success-message p {
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 480px) {
+            .payment-card {
+                padding: 25px;
+            }
+
+            .payment-title {
+                font-size: 1.5rem;
+            }
+
+            .plan-price .amount {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Payment Section -->
+    <section class="payment-page">
+        <div class="payment-container">
+            <div class="payment-card">
+                <!-- Logo -->
+                <div class="payment-logo">
+                    <a href="index.html">
+                        <span class="logo-icon">∞</span>
+                        <span class="logo-text">Mugen</span>
+                    </a>
+                </div>
+
+                <!-- Plan Info -->
+                <div id="payment-content">
+                    <span class="plan-badge"><i class="fas fa-users"></i> Lead Generation</span>
+                    <h1 class="payment-title">Leads Starter Plan</h1>
+                    <p class="payment-subtitle">Start growing your business with quality leads</p>
+
+                    <!-- Plan Details -->
+                    <div class="plan-details">
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">49</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Up to 500 leads/month</li>
+                            <li><i class="fas fa-check"></i> Basic lead verification</li>
+                            <li><i class="fas fa-check"></i> CSV export</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li><i class="fas fa-check"></i> 1 industry niche</li>
+                        </ul>
+                    </div>
+
+                    <!-- PayPal Button -->
+                    <div class="paypal-section">
+                        <p><i class="fas fa-lock"></i> Secure payment powered by PayPal</p>
+                        <div id="paypal-button-container-P-74X32464HD191010KNGCMONQ"></div>
+                        <div class="secure-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>256-bit SSL Encrypted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Message (Hidden by default) -->
+                <div class="success-message" id="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Subscription Successful!</h3>
+                    <p>Thank you for subscribing. You will receive a confirmation email shortly.</p>
+                    <a href="index.html" class="back-link" style="margin-top: 20px;">
+                        <i class="fas fa-home"></i> Return to Homepage
+                    </a>
+                </div>
+
+                <a href="pricing.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AawUz8zK6a1ta80Eai30BvOu8VVOBHauu5u6un5X8HORq6ewjym-8XaW5L7SlUKCCJopZfd9UTDdxSap&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+    <script>
+        paypal.Buttons({
+            style: {
+                shape: 'pill',
+                color: 'black',
+                layout: 'horizontal',
+                label: 'subscribe'
+            },
+            createSubscription: function(data, actions) {
+                return actions.subscription.create({
+                    plan_id: 'P-74X32464HD191010KNGCMONQ'
+                });
+            },
+            onApprove: function(data, actions) {
+                // Hide payment content and show success message
+                document.getElementById('payment-content').style.display = 'none';
+                document.getElementById('success-message').classList.add('show');
+                document.querySelector('.back-link').style.display = 'none';
+                
+                // Optional: Log subscription ID for your records
+                console.log('Subscription ID:', data.subscriptionID);
+            }
+        }).render('#paypal-button-container-P-74X32464HD191010KNGCMONQ');
+    </script>
+</body>
+</html>
