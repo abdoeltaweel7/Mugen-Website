@@ -38,6 +38,11 @@
     --radius-xl: 30px;
 }
 
+/* Hidden Service Class - For temporarily hiding services */
+.hidden-service {
+    display: none !important;
+}
+
 /* Reset & Base Styles */
 *, *::before, *::after {
     margin: 0;
